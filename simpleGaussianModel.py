@@ -21,9 +21,9 @@ y_iris = iris['species']  # extract the categorical data
 print(y_iris.shape)
 
 # Initialize and use dimensionality
-pcaModel = PCA(n_components=2)  # initialize PCA model to reduce dimensionality from 4 to 2
+pcaModel = PCA(n_components=2)  # initialize PCA model
 pcaModel.fit(X_iris)  # fit model to the higher dimensioned data
-X_2dimension = pcaModel.transform(X_iris)  # transform the data to 2 dimensions
+X_2dimension = pcaModel.transform(X_iris)  # transform from 4 to 2 dimensions
 
 # Augment current dataframe `iris` with new data from PCA transformation
 iris['PCA1'] = X_2dimension[:, 0]
